@@ -3,7 +3,6 @@ import './home.scss';
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Translate } from 'react-jhipster';
 import { Row, Col, Button, Container } from 'reactstrap';
 
 import { useAppSelector } from 'app/config/store';
@@ -17,7 +16,6 @@ export const Home = () => {
   const isAdmin = roles.includes('ROLE_ADMIN');
   const isUser = roles.includes('ROLE_USER');
 
-  // Render the dashboard if logged in
   if (account?.login) {
     if (isAdmin) {
       return <AdminDashboard />;
@@ -28,7 +26,6 @@ export const Home = () => {
     }
   }
 
-  // Render landing page if not logged in
   return (
     <Container
       fluid
