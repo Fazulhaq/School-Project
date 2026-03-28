@@ -5,6 +5,7 @@ import { useAppSelector } from 'app/config/store';
 import { entities } from 'app/config/entities';
 import './sidebar.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome } from '@fortawesome/free-solid-svg-icons';
 
 const Sidebar = () => {
   const account = useAppSelector(state => state.authentication.account);
@@ -24,7 +25,8 @@ const Sidebar = () => {
       <ul className="sidebar-menu">
         <li>
           <NavLink to="/" className="sidebar-link">
-            Dashboard
+            <FontAwesomeIcon icon={faHome} className="me-2" />
+            Home
           </NavLink>
         </li>
         {entities

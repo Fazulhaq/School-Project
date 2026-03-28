@@ -8,12 +8,13 @@ import { getSession } from 'app/shared/reducers/authentication';
 import PasswordStrengthBar from 'app/shared/layout/password/password-strength-bar';
 import { savePassword, reset } from './password.reducer';
 import { useNavigate } from 'react-router-dom';
+import DynamicBreadcrumb from 'app/shared/util/breadCrumb';
 
 export const PasswordPage = () => {
   const [password, setPassword] = useState('');
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
-  
+
   useEffect(() => {
     dispatch(reset());
     dispatch(getSession());
@@ -42,8 +43,11 @@ export const PasswordPage = () => {
     dispatch(reset());
   }, [successMessage, errorMessage]);
 
+  const breadcrumbItems = [{ label: 'Password Change', url: '' }];
+
   return (
     <div>
+      <DynamicBreadcrumb items={breadcrumbItems} />
       <Row className="justify-content-center">
         <Col md="8">
           <h2 id="password-title">

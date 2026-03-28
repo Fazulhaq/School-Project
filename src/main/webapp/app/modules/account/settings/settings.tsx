@@ -8,6 +8,7 @@ import { useAppDispatch, useAppSelector } from 'app/config/store';
 import { getSession } from 'app/shared/reducers/authentication';
 import { saveAccountSettings, reset } from './settings.reducer';
 import { useNavigate } from 'react-router-dom';
+import DynamicBreadcrumb from 'app/shared/util/breadCrumb';
 
 export const SettingsPage = () => {
   const dispatch = useAppDispatch();
@@ -38,8 +39,11 @@ export const SettingsPage = () => {
     );
   };
 
+  const breadcrumbItems = [{ label: 'User Settings', url: '' }];
+
   return (
     <div>
+      <DynamicBreadcrumb items={breadcrumbItems} />
       <Row className="justify-content-center">
         <Col md="8">
           <h2 id="settings-title">

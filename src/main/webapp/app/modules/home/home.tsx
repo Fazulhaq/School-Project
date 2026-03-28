@@ -30,9 +30,13 @@ export const Home = () => {
 
   // Render landing page if not logged in
   return (
-    <Container className="my-5 py-5 justify-content-center">
+    <Container
+      fluid
+      className="d-flex align-items-center justify-content-center"
+      style={{ minHeight: '100vh' }}
+    >
       <Row className="justify-content-center text-center">
-        <Col md="9">
+        <Col md="12">
           <div className="p-5 bg-light rounded-4 shadow-sm">
             <h1 className="display-4 fw-bold text-primary mb-3">
               Karimi School Management Information System
@@ -41,7 +45,6 @@ export const Home = () => {
               A modern School Management Information System to manage students,
               teachers, classes, and operations efficiently.
             </p>
-
             <div className="mb-4">
               <Link to="/login">
                 <Button

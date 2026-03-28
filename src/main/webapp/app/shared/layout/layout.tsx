@@ -7,7 +7,7 @@ const Layout = ({ children }) => {
     const isAuthenticated = useAppSelector(state => state.authentication.isAuthenticated);
 
     return (
-        <div className="app-container">
+        <div className={`app-container ${isAuthenticated ? 'with-sidebar' : 'no-sidebar'}`}>
             {isAuthenticated && <Sidebar />}
             <div className="main-content">
                 {children}

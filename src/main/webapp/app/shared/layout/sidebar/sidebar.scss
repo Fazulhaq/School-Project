@@ -63,8 +63,19 @@
   color: #fff;
 }
 
+.app-container.with-sidebar .main-content {
+  margin-left: 240px;
+  width: calc(100% - 240px);
+}
+
+.app-container.no-sidebar .main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .main-content {
-  margin-left: 220px;
   padding: 20px;
   width: 100%;
+  min-height: 100vh;
 }
