@@ -1,0 +1,9 @@
+{
+  "schoolMisApp": {
+    "PaymentMethod": {
+      "null": "",
+      "CASH": "CASH",
+      "BANK": "BANK"
+    }
+  }
+}

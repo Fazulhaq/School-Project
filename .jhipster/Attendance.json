@@ -1,0 +1,29 @@
+{
+  "annotations": {
+    "changelogDate": "20260325072516"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "date",
+      "fieldType": "LocalDate",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "AttendanceStatus",
+      "fieldValues": "PRESENT,ABSENT"
+    }
+  ],
+  "name": "Attendance",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "student",
+      "relationshipName": "student",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no"
+}

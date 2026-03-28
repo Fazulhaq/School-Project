@@ -1,0 +1,9 @@
+{
+  "schoolMisApp": {
+    "AttendanceStatus": {
+      "null": "",
+      "PRESENT": "PRESENT",
+      "ABSENT": "ABSENT"
+    }
+  }
+}

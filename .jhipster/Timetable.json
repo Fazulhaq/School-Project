@@ -1,0 +1,42 @@
+{
+  "annotations": {
+    "changelogDate": "20260325072522"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "dayOfWeek",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "startTime",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "endTime",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "name": "Timetable",
+  "relationships": [
+    {
+      "otherEntityName": "section",
+      "relationshipName": "section",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "subject",
+      "relationshipName": "subject",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "teacher",
+      "relationshipName": "teacher",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no"
+}

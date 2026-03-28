@@ -1,0 +1,29 @@
+{
+  "annotations": {
+    "changelogDate": "20260325072514"
+  },
+  "applications": "*",
+  "fields": [],
+  "name": "TeacherSubject",
+  "relationships": [
+    {
+      "otherEntityName": "teacher",
+      "relationshipName": "teacher",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "subject",
+      "relationshipName": "subject",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "section",
+      "relationshipName": "section",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no"
+}

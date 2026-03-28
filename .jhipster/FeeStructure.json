@@ -1,0 +1,26 @@
+{
+  "annotations": {
+    "changelogDate": "20260325072520"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "amount",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "academicYear",
+      "fieldType": "String"
+    }
+  ],
+  "name": "FeeStructure",
+  "relationships": [
+    {
+      "otherEntityName": "studentClass",
+      "relationshipName": "studentClass",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no"
+}

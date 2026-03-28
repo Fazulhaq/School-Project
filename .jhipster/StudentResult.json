@@ -1,0 +1,29 @@
+{
+  "annotations": {
+    "changelogDate": "20260325072519"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "marksObtained",
+      "fieldType": "BigDecimal"
+    }
+  ],
+  "name": "StudentResult",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "student",
+      "relationshipName": "student",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "examSubject",
+      "relationshipName": "examSubject",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no"
+}

@@ -1,0 +1,26 @@
+{
+  "schoolMisApp": {
+    "studentResult": {
+      "home": {
+        "title": "Student Results",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Student Result",
+        "createOrEditLabel": "Create or edit a Student Result",
+        "notFound": "No Student Results found"
+      },
+      "created": "A new Student Result is created with identifier {{ param }}",
+      "updated": "A Student Result is updated with identifier {{ param }}",
+      "deleted": "A Student Result is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Student Result {{ id }}?"
+      },
+      "detail": {
+        "title": "Student Result"
+      },
+      "id": "ID",
+      "marksObtained": "Marks Obtained",
+      "student": "Student",
+      "examSubject": "Exam Subject"
+    }
+  }
+}

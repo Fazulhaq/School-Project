@@ -1,0 +1,26 @@
+{
+  "schoolMisApp": {
+    "examSubject": {
+      "home": {
+        "title": "Exam Subjects",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Exam Subject",
+        "createOrEditLabel": "Create or edit a Exam Subject",
+        "notFound": "No Exam Subjects found"
+      },
+      "created": "A new Exam Subject is created with identifier {{ param }}",
+      "updated": "A Exam Subject is updated with identifier {{ param }}",
+      "deleted": "A Exam Subject is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Exam Subject {{ id }}?"
+      },
+      "detail": {
+        "title": "Exam Subject"
+      },
+      "id": "ID",
+      "maxMarks": "Max Marks",
+      "exam": "Exam",
+      "subject": "Subject"
+    }
+  }
+}

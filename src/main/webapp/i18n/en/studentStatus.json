@@ -1,0 +1,9 @@
+{
+  "schoolMisApp": {
+    "StudentStatus": {
+      "null": "",
+      "ACTIVE": "ACTIVE",
+      "GRADUATED": "GRADUATED"
+    }
+  }
+}

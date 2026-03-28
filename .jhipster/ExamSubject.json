@@ -1,0 +1,28 @@
+{
+  "annotations": {
+    "changelogDate": "20260325072518"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "maxMarks",
+      "fieldType": "Integer"
+    }
+  ],
+  "name": "ExamSubject",
+  "relationships": [
+    {
+      "otherEntityName": "exam",
+      "relationshipName": "exam",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "subject",
+      "relationshipName": "subject",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no"
+}

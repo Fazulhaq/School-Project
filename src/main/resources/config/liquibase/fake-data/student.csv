@@ -1,0 +1,11 @@
+id;first_name;last_name;date_of_birth;gender;admission_date;status
+1;Olin;Rice;2026-03-25;MALE;2026-03-24;ACTIVE
+2;Remington;Keebler;2026-03-24;OTHER;2026-03-24;ACTIVE
+3;Isai;Beahan;2026-03-25;FEMALE;2026-03-25;ACTIVE
+4;Verdie;Reichert;2026-03-24;FEMALE;2026-03-24;ACTIVE
+5;Bethel;Bradtke;2026-03-24;MALE;2026-03-25;GRADUATED
+6;Jaqueline;Hermiston;2026-03-24;OTHER;2026-03-24;ACTIVE
+7;Jakayla;Bahringer;2026-03-24;MALE;2026-03-25;GRADUATED
+8;Jaime;Schoen;2026-03-24;MALE;2026-03-25;GRADUATED
+9;Hubert;Satterfield;2026-03-24;MALE;2026-03-25;ACTIVE
+10;Ryan;Schaefer;2026-03-24;FEMALE;2026-03-24;ACTIVE

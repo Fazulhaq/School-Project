@@ -1,0 +1,163 @@
+//////////////////////////////////////////////////////
+// ENUMS
+//////////////////////////////////////////////////////
+
+enum UserRole {
+  ADMIN, TEACHER, STUDENT
+}
+
+enum Gender {
+  MALE, FEMALE, OTHER
+}
+
+enum StudentStatus {
+  ACTIVE, GRADUATED
+}
+
+enum AttendanceStatus {
+  PRESENT, ABSENT
+}
+
+enum PaymentMethod {
+  CASH, BANK
+}
+
+//////////////////////////////////////////////////////
+// ENTITIES
+//////////////////////////////////////////////////////
+
+entity Student {
+  firstName String
+  lastName String
+  dateOfBirth LocalDate
+  gender Gender
+  admissionDate LocalDate
+  status StudentStatus
+}
+
+entity Parent {
+  name String
+  phone String
+  email String
+}
+
+entity Teacher {
+  firstName String
+  lastName String
+  hireDate LocalDate
+  qualification String
+}
+
+entity StudentClass {
+  name String required
+}
+
+entity Section {
+  name String required
+}
+
+entity Subject {
+  name String required
+}
+
+entity TeacherSubject {
+}
+
+entity Enrollment {
+  academicYear String required
+  rollNumber Integer
+}
+
+entity Attendance {
+  date LocalDate required
+  status AttendanceStatus
+}
+
+entity Exam {
+  name String required
+  academicYear String
+}
+
+entity ExamSubject {
+  maxMarks Integer
+}
+
+entity StudentResult {
+  marksObtained BigDecimal
+}
+
+entity FeeStructure {
+  amount BigDecimal
+  academicYear String
+}
+
+entity Payment {
+  amount BigDecimal
+  paymentDate LocalDate
+  method PaymentMethod
+}
+
+entity Timetable {
+  dayOfWeek String
+  startTime LocalDate
+  endTime LocalDate
+}
+
+// Student / Parent / Teacher linked to User
+relationship OneToOne {
+  Student to User with builtInEntity,
+  Teacher to User with builtInEntity
+}
+
+// Academic Structure
+relationship ManyToOne {
+  Section{studentClass} to StudentClass
+}
+
+// Teacher - Subject - Section
+relationship ManyToOne {
+  TeacherSubject{teacher} to Teacher,
+  TeacherSubject{subject} to Subject,
+  TeacherSubject{section} to Section
+}
+
+// Enrollment
+relationship ManyToOne {
+  Enrollment{student} to Student,
+  Enrollment{section} to Section
+}
+
+// Attendance
+relationship ManyToOne {
+  Attendance{student} to Student
+}
+
+// Exams
+relationship ManyToOne {
+  ExamSubject{exam} to Exam,
+  ExamSubject{subject} to Subject
+}
+
+// Results
+relationship ManyToOne {
+  StudentResult{student} to Student,
+  StudentResult{examSubject} to ExamSubject
+}
+
+// Fees
+relationship ManyToOne {
+  FeeStructure{studentClass} to StudentClass
+}
+
+relationship ManyToOne {
+  Payment{student} to Student
+}
+
+// Timetable
+relationship ManyToOne {
+  Timetable{section} to Section,
+  Timetable{subject} to Subject,
+  Timetable{teacher} to Teacher
+}
+
+paginate Student, Teacher, Enrollment, Attendance, StudentResult, Payment with pagination

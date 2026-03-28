@@ -1,0 +1,26 @@
+{
+  "schoolMisApp": {
+    "feeStructure": {
+      "home": {
+        "title": "Fee Structures",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Fee Structure",
+        "createOrEditLabel": "Create or edit a Fee Structure",
+        "notFound": "No Fee Structures found"
+      },
+      "created": "A new Fee Structure is created with identifier {{ param }}",
+      "updated": "A Fee Structure is updated with identifier {{ param }}",
+      "deleted": "A Fee Structure is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Fee Structure {{ id }}?"
+      },
+      "detail": {
+        "title": "Fee Structure"
+      },
+      "id": "ID",
+      "amount": "Amount",
+      "academicYear": "Academic Year",
+      "studentClass": "Student Class"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+import {
+    faUserGraduate,
+    faChalkboardTeacher,
+    faUsers,
+    faLayerGroup,
+    faBook,
+    faLink,
+    faClipboardList,
+    faCalendarCheck,
+    faFileAlt,
+    faFileSignature,
+    faPoll,
+    faMoneyBill,
+    faCreditCard,
+    faClock,
+} from '@fortawesome/free-solid-svg-icons';
+
+export const entities = [
+    { name: 'student', path: '/student', roles: ['ROLE_USER'], icon: faUserGraduate },
+    { name: 'teacher', path: '/teacher', roles: ['ROLE_ADMIN'], icon: faChalkboardTeacher },
+    { name: 'studentClass', path: '/student-class', roles: ['ROLE_USER'], icon: faUsers },
+    { name: 'section', path: '/section', roles: ['ROLE_ADMIN'], icon: faLayerGroup },
+    { name: 'subject', path: '/subject', roles: ['ROLE_USER'], icon: faBook },
+    { name: 'teacherSubject', path: '/teacher-subject', roles: ['ROLE_ADMIN'], icon: faLink },
+    { name: 'enrollment', path: '/enrollment', roles: ['ROLE_ADMIN'], icon: faClipboardList },
+    { name: 'attendance', path: '/attendance', roles: ['ROLE_ADMIN', 'ROLE_USER'], icon: faCalendarCheck },
+    { name: 'exam', path: '/exam', roles: ['ROLE_USER'], icon: faFileAlt },
+    { name: 'examSubject', path: '/exam-subject', roles: ['ROLE_USER'], icon: faFileSignature },
+    { name: 'studentResult', path: '/student-result', roles: ['ROLE_USER'], icon: faPoll },
+    { name: 'feeStructure', path: '/fee-structure', roles: ['ROLE_ADMIN'], icon: faMoneyBill },
+    { name: 'payment', path: '/payment', roles: ['ROLE_ADMIN', 'ROLE_USER'], icon: faCreditCard },
+    { name: 'timetable', path: '/timetable', roles: ['ROLE_ADMIN', 'ROLE_USER'], icon: faClock },
+];
